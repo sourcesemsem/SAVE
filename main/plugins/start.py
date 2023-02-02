@@ -44,6 +44,6 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @TeamDrone"
+    text = "Hii,\nI am save restricted contents bot, I can\nsave files of restricted channels as\nwell as group.\nHit /help to learn more.\n\n•حفظ المحتويات المقيدة بوت ، يمكنني حفظ\n•ملفات القنوات المقيدة وكذلك المجموعة\n•اضغط /help لمعرفة المزيد"
     await start_srb(event, text)
     
