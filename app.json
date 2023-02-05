@@ -9,7 +9,7 @@
     ],
     "repository": "https://github.com/sourcesemsem/SAVE",
     "website": "",
-    "success_url": "https://t.me/DroneBots",
+    "success_url": "https://t.me/FTTUTY",
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
