@@ -26,7 +26,7 @@ async def check(userbot, client, link):
             link_ = link.split("?single")[0]
             msg_id = int(link_.split("/")[-1])
         else:
-            return False, "**Invalid Link!**"
+            return False, "**✅ انضم بنجاح إلى القناة.**"
     if 't.me/c/' in link:
         try:
             chat = int('-100' + str(link.split("/")[-2]))
