@@ -8,14 +8,14 @@ from ethon.mystarts import start_srb
     
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
-@Drone.on(events.callbackquery.CallbackQuery(data="set"))
+@Drone.on(events.callbackquery.CallbackQuery(data="مـسـاعـدهہ"))
 async def sett(event):    
     Drone = event.client                    
     button = await event.get_message()
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message.")
+        xx = await conv.send_message("إضغط /help لـمـعـرفـة الـمـذيـد")
         x = await conv.get_reply()
         if not x.media:
             xx.edit("No media found.")
@@ -32,7 +32,7 @@ async def sett(event):
         os.rename(path, f'./{event.sender_id}.jpg')
         await t.edit("Temporary thumbnail saved!")
         
-@Drone.on(events.callbackquery.CallbackQuery(data="rem"))
+@Drone.on(events.callbackquery.CallbackQuery(data="الـمـطـور"))
 async def remt(event):  
     Drone = event.client            
     await event.edit('Trying.')
@@ -40,10 +40,10 @@ async def remt(event):
         os.remove(f'{event.sender_id}.jpg')
         await event.edit('Removed!')
     except Exception:
-        await event.edit("No thumbnail saved.")                        
+        await event.edit("مـطـوري سـمـيـر @DEV_SAMIR\n\nقـنـاة الـسـورس  @FTTUTY")                        
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @FTTUTY"
+    text = "حفظ المحتويات المقيدة بوت ، يمكنني\nحفظ ملفات القنوات المقيدة وكذلك المجموعة\nاضغط /help لمعرفة المزيد."
     await start_srb(event, text)
     
