@@ -55,7 +55,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
             link_ = msg_link.split("?single")[0]
             msg_id = int(link_.split("/")[-1])
         else:
-            await client.edit_message_text(sender, edit_id, "**Invalid Link!**")
+            await client.edit_message_text(sender, edit_id, "**تم الانضمام بنجاح ✨  !**")
             return None
     if 't.me/c/' in msg_link:
         chat = int('-100' + str(msg_link.split("/")[-2]))
@@ -137,7 +137,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
             await edit.delete()
             return None
         except (ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid):
-            await client.edit_message_text(sender, edit_id, "Have you joined the channel?")
+            await client.edit_message_text(sender, edit_id, "قم بإرسال رابط القناة اولا.")
             return None
         except FloodWait as fw:
             print(fw)
